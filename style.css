@@ -1,0 +1,279 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f9f2f4;
+    color: #5a383e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Decorative elements */
+  .decorative-corner {
+    position: fixed;
+    width: 180px;
+    height: 180px;
+    pointer-events: none;
+    opacity: 0.15;
+    z-index: 0;
+  }
+  
+  .top-left {
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at 20% 20%, #c9a76d, transparent 70%);
+  }
+  
+  .top-right {
+    top: 0;
+    right: 0;
+    background: radial-gradient(circle at 80% 20%, #be7c8c, transparent 70%);
+  }
+  
+  .bottom-left {
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(circle at 20% 80%, #be7c8c, transparent 70%);
+  }
+  
+  .bottom-right {
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(circle at 80% 80%, #c9a76d, transparent 70%);
+  }
+  
+  /* Main container */
+  .invitation-card {
+    background: #fff;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(160, 120, 127, 0.2);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Header section */
+  .card-header {
+    background: linear-gradient(135deg, #d4a373, #c9a76d);
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .border-pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: repeating-linear-gradient(
+      -45deg,
+      #be7c8c,
+      #be7c8c 6px,
+      #d8a4af 6px,
+      #d8a4af 12px
+    );
+  }
+  
+  .card-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #fff;
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-shadow: 1px 2px 3px rgba(90, 56, 62, 0.3);
+  }
+  
+  .card-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .elegant-icon {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 10px 0;
+  }
+  
+  /* Content section */
+  .card-body {
+    padding: 40px 30px;
+  }
+  
+  .event-details {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 15px;
+  }
+  
+  .event-details::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #be7c8c, #d8a4af);
+    border-radius: 3px;
+  }
+  
+  .event-details p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    color: #5a383e;
+  }
+  
+  .event-details strong {
+    color: #be7c8c;
+    font-weight: 600;
+  }
+  
+  .input-group {
+    margin-bottom: 25px;
+  }
+  
+  .input-group label {
+    display: block;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #5a383e;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: 2px solid #e2d1d3;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    background-color: #fdfbfb;
+    color: #5a383e;
+  }
+  
+  .input-group input::placeholder {
+    color: #c0a2a7;
+    font-style: italic;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-color: #be7c8c;
+    box-shadow: 0 0 0 3px rgba(190, 124, 140, 0.2);
+  }
+  
+  .confirmation-message {
+    min-height: 24px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Button styles */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .btn {
+    flex: 1;
+    padding: 16px 0;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn-accept {
+    background: linear-gradient(to right, #d4a373, #c9a76d);
+    color: white;
+    box-shadow: 0 4px 12px rgba(212, 163, 115, 0.3);
+  }
+  
+  .btn-accept:hover:not(:disabled) {
+    background: linear-gradient(to right, #c9a76d, #bb9c64);
+    box-shadow: 0 6px 14px rgba(212, 163, 115, 0.4);
+    transform: translateY(-2px);
+  }
+  
+  .btn-decline {
+    background: linear-gradient(to right, #be7c8c, #d8a4af);
+    color: white;
+    box-shadow: 0 4px 12px rgba(190, 124, 140, 0.3);
+  }
+  
+  .btn-decline:hover:not(:disabled) {
+    background: linear-gradient(to right, #b57383, #cc99a4);
+    box-shadow: 0 6px 14px rgba(190, 124, 140, 0.4);
+    transform: translateY(-2px);
+  }
+  
+  .btn:disabled {
+    background: #e2d1d3;
+    color: #ab9295;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  .btn.active {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(212, 163, 115, 0.5);
+  }
+  
+  /* Footer decoration */
+  .card-footer {
+    height: 8px;
+    background: linear-gradient(to right, #be7c8c, #d8a4af, #c9a76d);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 480px) {
+    .invitation-card {
+      max-width: 100%;
+    }
+    
+    .card-header {
+      padding: 25px 15px;
+    }
+    
+    .card-header h1 {
+      font-size: 2rem;
+    }
+    
+    .card-header h2 {
+      font-size: 1rem;
+    }
+    
+    .card-body {
+      padding: 30px 20px;
+    }
+    
+    .btn {
+      padding: 14px 0;
+    }
+  }
